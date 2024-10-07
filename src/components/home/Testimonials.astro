@@ -1,25 +1,25 @@
 ---
 const testimonials = [
   {
-    name: 'Rebecca Hayes',
-    description: 'Designer',
-    image: '/assets/testimonial-1.webp',
+    name: 'Angela Abarza',
+    description: 'Vendeme tu auto',
+    image: '/assets/LogoVTA2.png',
     message:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+      '"Gracias a su ayuda, ahora tenemos una página web profesional que ha aumentado y facilitado nuestras ventas. ¡Totalmente recomendados!"',
   },
   {
-    name: 'Rosa Spencer',
-    description: 'Team Leader',
-    image: '/assets/testimonial-2.webp',
+    name: 'Tomas Zuñiga',
+    description: 'Invierte con datos',
+    image: '/assets/invierteConDatos.PNG',
     message:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+      '"La implementación de GA4 nos ha permitido optimizar nuestras campañas de marketing y mejorar nuestras conversiones significativamente."',
   },
   {
     name: 'Christina Upton',
-    description: 'Manager',
-    image: '/assets/testimonial-3.webp',
+    description: 'Renta Renta',
+    image: '/assets/RentaRenta.PNG',
     message:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+      '"Automatizar la generación de cotizaciones fue un cambio total. Hemos ahorrado horas de trabajo manual y mejorado la experiencia del cliente."',
   },
 ];
 ---
@@ -28,7 +28,7 @@ const testimonials = [
   <div class="v mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col items-center gap-12 lg:gap-20">
       <h2 class="mx-auto max-w-xl text-center text-3xl font-medium tracking-tight sm:text-4xl">
-        Trusted by the largest companies in the world
+        Algunos de nuestros casos de exito
       </h2>
       <div
         class="divide-primary-900/10 dark:divide-primary-300/10 grid divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0"
@@ -53,7 +53,7 @@ const testimonials = [
                 <p>{testimonial.message}</p>
               </blockquote>
               <figcaption class="flex flex-col gap-4">
-                <img class="mx-auto h-8 w-8 rounded-full" src={testimonial.image} alt="" />
+                <img class="mx-auto h-8 w-8 rounded-full bg-white" src={testimonial.image} alt="" />
                 <div class="text-center">
                   <div class="text-base font-medium">{testimonial.name}</div>
                   <div class="text-primary-950/70 dark:text-primary-200/70 text-sm">

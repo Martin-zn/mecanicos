@@ -1,23 +1,23 @@
 ---
 const links = [
   {
-    ref: '01',
+    // ref: '01',
     name: 'Home',
     href: '/',
   },
   {
-    ref: '02',
-    name: 'About',
+    // ref: '02',
+    name: 'Nosotros',
     href: '/about',
   },
+  // {
+  //   // ref: '03',
+  //   name: 'Servicios',
+  //   href: '/pricing',s
+  // },
   {
-    ref: '03',
-    name: 'Pricing',
-    href: '/pricing',
-  },
-  {
-    ref: '04',
-    name: 'Contact',
+    // ref: '04',
+    name: 'Contacto',
     href: '/contact',
   },
 ];
@@ -37,14 +37,22 @@ const links = [
         href="/"
         class="focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2"
       >
-        <span class="sr-only">Stone</span>
-        <img
+        <span class="sr-only">SmartBoost</span>
+
+        <!-- LOGO -->
+         
+        <!-- <img
           class="h-8 w-auto"
           width="65"
           height="40"
           :src="$store.theme.isDark ? '/assets/logo-inverted.svg' : '/assets/logo.svg'"
           alt="Stone"
-        />
+        /> -->
+        <span class="text-xl font-bold">
+          SmartBoost
+        </span>
+
+
       </a>
     </div>
 
@@ -141,8 +149,7 @@ const links = [
         <p
           class="text-primary-950/70 dark:text-primary-200/70 max-w-sm text-xl italic leading-loose"
         >
-          <span class="font-medium">Stone</span> is a premium Astro theme specially designed for
-          Business, Marketing, SaaS and Startup websites.
+          <span class="font-medium">Transformamos tus ideas en soluciones digitales</span> Ofrecemos servicios de desarrollo web, automatización de procesos e integraciones tecnológicas para hacer crecer tu negocio. Trabajamos contigo para crear soluciones personalizadas y eficientes.
         </p>
       </div>
 
@@ -156,7 +163,7 @@ const links = [
             >
               <div class="group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
                 <div class="flex items-center gap-6">
-                  <span class="text-xs">{link.ref}</span>
+                  {/* <span class="text-xs">{link.ref}</span> */}
                   <span class="group-hover:underline">{link.name}</span>
                 </div>
                 <svg
