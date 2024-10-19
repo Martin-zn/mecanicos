@@ -1,0 +1,31 @@
+{
+    "catalogue": {
+      "children": [
+        {
+          "id": 1,
+          "path": "/products/product-1",
+          "name": "Product 1",
+          "description": "Description for Product 1",
+          "price": 29.99,
+          "image": "https://img.freepik.com/foto-gratis/programador-teletrabajo-que-disena-desarrolla-software-utilizando-tableta_482257-98295.jpg?t=st=1729023880~exp=1729027480~hmac=9eba40ce5411d878b8e4dd70516db640a432eda4d9181034ab0d50705dde9e88&w=740"
+        },
+        {
+          "id": 2,
+          "path": "/products/product-2",
+          "name": "Product 2",
+          "description": "Description for Product 2",
+          "price": 39.99,
+          "image": "https://img.freepik.com/foto-gratis/programador-teletrabajo-que-disena-desarrolla-software-utilizando-tableta_482257-98295.jpg?t=st=1729023880~exp=1729027480~hmac=9eba40ce5411d878b8e4dd70516db640a432eda4d9181034ab0d50705dde9e88&w=740"
+        },
+        {
+          "id": 3,
+          "path": "/products/product-3",
+          "name": "Product 3",
+          "description": "Producto con Vania",
+          "price": 1000000,
+          "image": "https://img.freepik.com/foto-gratis/programador-teletrabajo-que-disena-desarrolla-software-utilizando-tableta_482257-98295.jpg?t=st=1729023880~exp=1729027480~hmac=9eba40ce5411d878b8e4dd70516db640a432eda4d9181034ab0d50705dde9e88&w=740"
+        }
+
+      ]
+    }
+  }

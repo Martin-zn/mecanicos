@@ -1,0 +1,20 @@
+---
+import ProductCard from "./product-card.jsx";
+import  { fetchAllProducts }  from "../../util/service";
+
+const products= await fetchAllProducts();
+const productList = products.catalogue.children;
+
+---
+
+<section class="">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center gap-8 rounded-3xl px-5 py-16 sm:gap-10">
+        <div class="flex flex-col gap-8 w-full items-center">
+          {productList.map((product) => (
+            <ProductCard product={product} />
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>

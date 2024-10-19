@@ -4,13 +4,15 @@ import Faq from '../components/pricing/Faq.astro';
 import Heading from '../components/pricing/Heading.astro';
 import PricingTable from '../components/pricing/PricingTable.astro';
 import Layout from '../layouts/Layout.astro';
+import ProductList from '../components/product/ProductsList.astro'
 ---
 
 <Layout
-  description="Find the pricing plan that best fits your needs. Plans include seats, projects, support and more"
-  title="Pricing · Stone"
+  description="Encuentra el producto que te lleve al siguiente nivel"
+  title="Productos"
 >
   <Heading />
+  <ProductList client:load />
   <PricingTable />
   <Faq />
   <Cta />

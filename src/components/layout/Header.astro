@@ -6,15 +6,16 @@ const links = [
     href: '/',
   },
   {
+  //   // ref: '03',
+     name: 'Productos',
+     href: '/products',
+   },
+  {
     // ref: '02',
     name: 'Nosotros',
     href: '/about',
   },
-  // {
-  //   // ref: '03',
-  //   name: 'Servicios',
-  //   href: '/pricing',s
-  // },
+   
   {
     // ref: '04',
     name: 'Contacto',
@@ -41,20 +42,26 @@ const links = [
 
         <!-- LOGO -->
          
-        <!-- <img
-          class="h-8 w-auto"
-          width="65"
-          height="40"
-          :src="$store.theme.isDark ? '/assets/logo-inverted.svg' : '/assets/logo.svg'"
-          alt="Stone"
-        /> -->
+        <!-- <img class="h-8 w-auto" width="65" height="40" :src="$store.theme.isDark ? '/assets/logo-inverted.svg' : '/assets/logo.svg'" alt="Stone"/> -->
+
         <span class="text-xl font-bold">
           SmartBoost
         </span>
 
-
       </a>
     </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-4">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class="text-primary-950 dark:text-primary-200 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium"
+        >
+          {link.name}
+        </a>
+      ))}
+    </nav>
 
     <!-- Actions -->
     <div class="-mr-2 flex items-center space-x-2 sm:space-x-3">
@@ -94,10 +101,14 @@ const links = [
         </svg>
       </button>
 
+
+      
+      
+
       <!-- Toggle menu -->
       <button
         type="button"
-        class="text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950 inline-flex h-14 w-14 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2"
+        class="md:hidden text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950 inline-flex h-14 w-14 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2"
         @click="open = !open"
         @mousedown="if (open) $event.preventDefault()"
         aria-controls="website-menu"
