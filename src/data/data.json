@@ -7,9 +7,9 @@
           "name": "Pagina 1",
           "description": "Pagina minimalista, cuenta con diferentes secciones, esta optimizada y es perfecta para ti!",
           "price": 120.990,
-          "image1": "../../public/products/smartboost1.PNG",
-          "image2": "../../public/products/smartboost2.PNG",
-          "image3": "../../public/products/smartboost3.PNG",
+          "image1": "/products/smartboost1.PNG",
+          "image2": "/products/smartboost2.PNG",
+          "image3": "/products/smartboost3.PNG",
           "properties": ["Minimalista", "Ceo Optimizado", "Modo noche", "Formulario de contacto"]
         },
         {
@@ -18,9 +18,9 @@
           "name": "Pagina 2",
           "description": "Pagina diseñana especificamente para llamar la atencion con su formulario personalizado, cuenta con diferentes secciones, esta optimizada y es perfecta para ti!",
           "price": 160.990,
-          "image1": "../../public/products/vendemetuauto1.PNG",
-          "image2": "../../public/products/vendemetuauto2.PNG",
-          "image3": "../../public/products/vendemetuauto3.PNG",
+          "image1": "/products/vendemetuauto1.PNG",
+          "image2": "/products/vendemetuauto2.PNG",
+          "image3": "/products/vendemetuauto3.PNG",
           "properties": ["Ceo Optimizado","Formulario personalizado", "Galeria de productos"]
         },
         {
@@ -29,7 +29,7 @@
           "name": "Base de datos de valores extraidos del mercado",
           "description": "Mediante el webscraping podemos generar una base de datos de los valores que se manejan en el mercado",
           "price": 159.990,
-          "image1": "../../public/products/estudioMercado.webp",
+          "image1": "/products/estudioMercado.webp",
           "properties": ["Servicio Personalizado", "Estudio de mercado"]
         }
 
