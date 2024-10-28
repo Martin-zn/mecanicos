@@ -4,7 +4,8 @@ import Faq from '../components/pricing/Faq.astro';
 import Heading from '../components/pricing/Heading.astro';
 import PricingTable from '../components/pricing/PricingTable.astro';
 import Layout from '../layouts/Layout.astro';
-import ProductList from '../components/product/ProductsList.astro'
+// import ProductList from '../components/product/Products.astro'
+import Lista from '../components/product/Lista.astro'
 ---
 
 <Layout
@@ -12,7 +13,9 @@ import ProductList from '../components/product/ProductsList.astro'
   title="Productos"
 >
   <Heading />
-  <ProductList client:load />
+  <!-- <ProductList /> -->
+  <Lista/>
+  <!-- <Lista client:load/> -->
   <PricingTable />
   <Faq />
   <Cta />
