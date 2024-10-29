@@ -1,12 +1,12 @@
 ---
 const pricing = [
   {
-    name: 'Basic',
-    description: 'For development, staging, and small production projects.',
-    periodicity: '/month',
-    price: '$10',
+    name: 'Basico',
+    description: 'Pequeños desarrollos, o implementaciones basicas',
+    periodicity: 'c/u',
+    price: '$69.990',
     action: 'Buy Now',
-    features: ['5 Seats', '1,000 Projects', 'Lifetime access', 'Community Support'],
+    features: ['Automatizaciones', 'implementaciones', 'Asesoria'],
   },
   {
     name: 'Pro',
@@ -37,7 +37,11 @@ const pricing = [
 
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:max-w-7xl lg:px-8 mb-8">
+        <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">Desarrollo Personalizado</h1>
+    </div>
     <div class="-mt-8 grid gap-8 lg:mt-0 lg:grid-cols-3">
+      
       {
         pricing.map((item) => (
           <div

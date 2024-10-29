@@ -10,7 +10,7 @@
           "image1": "/products/smartboost1.PNG",
           "image2": "/products/smartboost2.PNG",
           "image3": "/products/smartboost3.PNG",
-          "properties": ["Minimalista", "Ceo Optimizado", "Modo noche", "Formulario de contacto"]
+          "properties": ["Minimalista", "SEO Optimizado", "Modo noche", "Formulario de contacto"]
         },
         {
           "id": 2,
@@ -21,7 +21,7 @@
           "image1": "/products/vendemetuauto1.PNG",
           "image2": "/products/vendemetuauto2.PNG",
           "image3": "/products/vendemetuauto3.PNG",
-          "properties": ["Ceo Optimizado","Formulario personalizado", "Galeria de productos"]
+          "properties": ["SEO Optimizado","Formulario personalizado", "Galeria de productos"]
         },
         {
           "id": 3,
@@ -31,6 +31,15 @@
           "price": 159.990,
           "image1": "/products/estudioMercado.webp",
           "properties": ["Servicio Personalizado", "Estudio de mercado"]
+        },
+        {
+          "id": 4,
+          "path": "/products/product-4",
+          "name": "Automatizacion de recepcion de informacion",
+          "description": "Conectamos tu formulario personalizado a un webhook y automatizamos una respues o aviso via mail al cliente o a quien tu desees.",
+          "price": 49.990,
+          "image1": "/products/autoemail.webp",
+          "properties": ["Servicio Personalizado", "Automatizacion"]
         }
 
       ]
