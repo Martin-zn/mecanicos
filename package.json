@@ -22,6 +22,7 @@
     "alpinejs": "3.12.3",
     "astro": "^4.15.12",
     "astro-compress": "2.0.14",
+    "axios": "^1.7.9",
     "prettier": "3.0.2",
     "prettier-plugin-astro": "0.12.0",
     "prettier-plugin-tailwindcss": "0.5.3",

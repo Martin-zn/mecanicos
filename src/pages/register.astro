@@ -1,16 +1,16 @@
 ---
-import ContactForm from '../components/contact/ContactForm.astro';
-import CalendarForm from '../components/contact/CalendarForm.astro';
 import ContactInfo from '../components/contact/ContactInfo.astro';
+import RegisterForm from '../components/registeer/register';
 import Layout from '../layouts/Layout.astro';
+
 ---
 
 <Layout
   description="CContactate con nuestro equipo."
   title="Contacto · Shiteki"
 >
-  <ContactInfo />
-  <ContactForm />
-  <!-- <CalendarForm/> -->
+<RegisterForm client:load/>
+<ContactInfo />
+
   
 </Layout>

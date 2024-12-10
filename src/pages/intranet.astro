@@ -4,6 +4,7 @@ import Hero from '../components/home/Hero.astro';
 import Layout from '../layouts/Layout.astro';
 import Lista from '../components/product/Lista.astro'
 import Heading from '../components/pricing/Heading.astro';
+import Intranetpage from '../components/intranet/intranet.jsx';
 ---
 
 <Layout
@@ -11,9 +12,7 @@ import Heading from '../components/pricing/Heading.astro';
   title="Shiteki"
 
 >
-  <Hero />
-  <Heading />
-  <Lista/>
+<Intranetpage client:load/>
 
 
 </Layout>

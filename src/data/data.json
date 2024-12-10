@@ -1,47 +1,50 @@
 {
-    "catalogue": {
-      "children": [
-        {
-          "id": 1,
-          "path": "/products/product-1",
-          "name": "Pagina 1",
-          "description": "Pagina minimalista, cuenta con diferentes secciones, esta optimizada y es perfecta para ti!",
-          "price": 120.990,
-          "image1": "/products/smartboost1.PNG",
-          "image2": "/products/smartboost2.PNG",
-          "image3": "/products/smartboost3.PNG",
-          "properties": ["Minimalista", "SEO Optimizado", "Modo noche", "Formulario de contacto"]
-        },
-        {
-          "id": 2,
-          "path": "/products/product-2",
-          "name": "Pagina 2",
-          "description": "Pagina diseñana especificamente para llamar la atencion con su formulario personalizado, cuenta con diferentes secciones, esta optimizada y es perfecta para ti!",
-          "price": 160.990,
-          "image1": "/products/vendemetuauto1.PNG",
-          "image2": "/products/vendemetuauto2.PNG",
-          "image3": "/products/vendemetuauto3.PNG",
-          "properties": ["SEO Optimizado","Formulario personalizado", "Galeria de productos"]
-        },
-        {
-          "id": 3,
-          "path": "/products/product-3",
-          "name": "Base de datos de valores extraidos del mercado",
-          "description": "Mediante el webscraping podemos generar una base de datos de los valores que se manejan en el mercado",
-          "price": 159.990,
-          "image1": "/products/estudioMercado.webp",
-          "properties": ["Servicio Personalizado", "Estudio de mercado"]
-        },
-        {
-          "id": 4,
-          "path": "/products/product-4",
-          "name": "Automatizacion de recepcion de informacion",
-          "description": "Conectamos tu formulario personalizado a un webhook y automatizamos una respues o aviso via mail al cliente o a quien tu desees.",
-          "price": 49.990,
-          "image1": "/products/autoemail.webp",
-          "properties": ["Servicio Personalizado", "Automatizacion"]
-        }
-
-      ]
-    }
+  "catalogue": {
+    "children": [
+      {
+        "id": 1,
+        "path": "/products/service-1",
+        "name": "Cambio de Aceite y Filtros",
+        "description": "Servicio completo de cambio de aceite y filtros, utilizando productos de alta calidad para garantizar el mejor rendimiento de tu vehículo.",
+        "price": 120.990,
+        "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrcONlvf_9bf_pjwPIaF3Y_jlqsaAyUE_B4g&s",
+        "image2": "/services/oilchange2.png",
+        "image3": "/services/oilchange3.png",
+        "properties": ["Aceite sintético", "Filtros de aire", "Filtros de aceite"]
+      },
+      {
+        "id": 2,
+        "path": "/products/service-2",
+        "name": "Revisión Técnica Completa",
+        "description": "Revisión exhaustiva de todos los sistemas de tu auto, asegurándonos de que cumple con todos los estándares técnicos.",
+        "price": 160.990,
+        "image1": "https://cdn.prod.website-files.com/646d0b7a987a7233a22c80cf/65ca2f18a180057ac1a9e69c_revision-tecnica.jpg",
+        "image2": "/services/inspection2.png",
+        "image3": "/services/inspection3.png",
+        "properties": ["Diagnóstico computarizado", "Revisión de frenos", "Chequeo de emisiones"]
+      },
+      {
+        "id": 3,
+        "path": "/products/service-3",
+        "name": "Alineación y Balanceo",
+        "description": "Servicio de alineación y balanceo para garantizar una conducción suave y segura en carretera.",
+        "price": 59.990,
+        "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuwKkGfgF0j4td_1n_i2ontil-5J5tsXwzgg&s",
+        "image2": "/services/alignment2.png",
+        "image3": "/services/alignment3.png",
+        "properties": ["Alineación de ruedas", "Balanceo de neumáticos", "Inspección de suspensión"]
+      },
+      {
+        "id": 4,
+        "path": "/products/service-4",
+        "name": "Reparación de Frenos",
+        "description": "Reparación y mantenimiento de los frenos de tu vehículo para garantizar tu seguridad y la de tus pasajeros.",
+        "price": 49.990,
+        "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3NecIBlWk5ME0WoKkJnuE4paeTuX5guyKyg&s",
+        "image2": "/services/brakerepair2.png",
+        "image3": "/services/brakerepair3.png",
+        "properties": ["Cambio de pastillas", "Revisión de discos", "Purgado de sistema"]
+      }
+    ]
   }
+}

@@ -1,20 +1,22 @@
 ---
+import Buttons from "./Buttons";
+
 const links = [
   {
     // ref: '01',
     name: 'Home',
     href: '/',
   },
-  {
-  //   // ref: '03',
-     name: 'Productos',
-     href: '/products',
-   },
-  {
-    // ref: '02',
-    name: 'Nosotros',
-    href: '/about',
-  },
+  // {
+  // //   // ref: '03',
+  //    name: 'Productos',
+  //    href: '/products',
+  //  },
+  // {
+  //   // ref: '02',
+  //   name: 'Nosotros',
+  //   href: '/about',
+  // },
    
   {
     // ref: '04',
@@ -41,13 +43,9 @@ const links = [
         <span class="sr-only">Shiteki</span>
 
         <!-- LOGO -->
-         
-        <!-- <img class="h-8 w-auto" width="65" height="40" :src="$store.theme.isDark ? '/assets/logo-inverted.svg' : '/assets/logo.svg'" alt="Stone"/> -->
-
         <span class="text-xl font-bold">
           Shiteki
         </span>
-
       </a>
     </div>
 
@@ -73,6 +71,7 @@ const links = [
         @click="$store.theme.toggle()"
       >
         <span class="sr-only">Toggle theme mode</span>
+        <!-- Theme toggle icons -->
         <svg
           x-cloak
           class="h-6 w-6"
@@ -101,50 +100,14 @@ const links = [
         </svg>
       </button>
 
-
-      
-      
-
-      <!-- Toggle menu -->
-      <button
-        type="button"
-        class="md:hidden text-primary-950 dark:text-primary-200 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 ring-primary-950 inline-flex h-14 w-14 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2"
-        @click="open = !open"
-        @mousedown="if (open) $event.preventDefault()"
-        aria-controls="website-menu"
-        aria-expanded="false"
-        :aria-expanded="open.toString()"
-      >
-        <span class="sr-only">Toggle menu</span>
-        <svg
-          x-cloak
-          class="h-8 w-8"
-          :class="{ 'hidden': open, 'block': !(open) }"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path d="M19 8H5V10H19V8ZM19 14H5V16H19V14Z"></path>
-        </svg>
-        <svg
-          x-cloak
-          class="h-8 w-8"
-          :class="{ 'block': open, 'hidden': !(open) }"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path
-            d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z"
-          ></path>
-        </svg>
-      </button>
+     <!-- Botones (sección dinámica) -->
+    <div>
+      <Buttons client:load />
+    </div>
     </div>
   </div>
 
-  <!-- Menu content -->
+  <!-- Menu content (Mobile) -->
   <div
     class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8"
     id="website-menu"
@@ -174,7 +137,6 @@ const links = [
             >
               <div class="group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
                 <div class="flex items-center gap-6">
-                  {/* <span class="text-xs">{link.ref}</span> */}
                   <span class="group-hover:underline">{link.name}</span>
                 </div>
                 <svg

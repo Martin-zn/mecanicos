@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { fetchProduct } from '../../util/service';  // Asegúrate de que esta ruta sea correcta
+import { fetchProduct } from '../../util/service'; // Asegúrate de que esta ruta sea correcta
+import CalendarForm from '../../components/contact/CalendarForm.astro'; 
 
 const ProductDetails = ({ fullPath }) => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
+    // Verificar si el token existe en localStorage
+    const token = localStorage.getItem('token');
+    setIsAuthenticated(!!token); // Si hay token, es verdadero
+
+    // Cargar los detalles del producto
     async function loadProduct() {
       try {
         const data = await fetchProduct(fullPath);
@@ -42,37 +49,9 @@ const ProductDetails = ({ fullPath }) => {
         <div className="md:w-3/5">
           <h1 className="text-3xl font-bold mb-4 text-center">{product.name}</h1>
           <p className="text-gray-600 mb-4 text-center text-xl">{product.description}</p>
-          <p className="text-2xl font-bold text-primary-500 mb-4 text-center">Valor: ${product.price.toFixed(3)}</p>
-
-          {/* Contenedor para las propiedades del producto */}
-          <div className="container flex flex-col items-center justify-center">
-            {product.properties && product.properties.length > 0 ? (
-              product.properties.map((property, index) => (
-                <div
-                  key={index}
-                  id={`toast-${index}`}
-                  className="flex items-center w-full max-w-xs p-4 mb-4 text-primary-700 bg-primary-100 rounded-lg shadow-xl dark:text-primary-400 dark:bg-primary-800"
-                  role="alert"
-                >
-                  <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
-                    <svg
-                      className="w-5 h-5 text-blue-500"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                    </svg>
-                    <span className="sr-only">Check icon</span>
-                  </div>
-                  <div className="ms-3 text-sm font-normal">{property}</div>
-                </div>
-              ))
-            ) : (
-              <div>No hay propiedades disponibles</div>
-            )}
-          </div>
+          <p className="text-2xl font-bold text-primary-500 mb-4 text-center">
+            Valor: ${product.price.toFixed(3)}
+          </p>
 
           <button
             className="bg-[#25830d] text-white px-6 py-2 rounded-lg  hover:bg-primary-700 transition duration-300 w-full"
@@ -83,29 +62,31 @@ const ProductDetails = ({ fullPath }) => {
           </button>
         </div>
       </div>
-      {product.image2 && (
-      <h2 className='text-3xl font-bold mb-4 text-center'>Mas imagenes</h2>
+
+      {/* Condicional para mostrar el formulario del calendario */}
+      {isAuthenticated && (
+        <section id="agendar">
+        <div class="flex justify-center mb-8">
+            <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Agenda una reunion</h2>
+        </div>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 border border-white max-h-[1100px] dark:bg-primary-300 rounded-3xl">
+          <div class="flex flex-col items-center gap-8 rounded-3xl px-5 py-16 sm:gap-10 max-h-[1100px]">
+            <div class="flex flex-col gap-8 w-full items-center">
+            {/* <!-- Google Calendar Appointment Scheduling begin --> */}
+                <iframe 
+                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1STChHSTAveS936HOVa02Hl1CEUWov4rVxGeYmwCqKY19Rtshbt1uX4QMPP7-oN_saPnmJJXD5?gv=true" 
+                    // style="border: 0; border-radius: 8px; overflow: hidden" 
+                    width="100%" 
+                    height="1000" 
+                >
+                </iframe>
+            {/* <!-- end Google Calendar Appointment Scheduling --> */}
+             
+            </div>
+          </div>
+        </div>
+      </section>
       )}
-        <div className="flex flex-col md:flex-row gap-8">
-        {product.image2 && (
-          <div className="md:w-1/2">
-            <img
-              src={product.image2}
-              alt={product.name}
-              className="w-full max-h-[500px] h-auto object-cover rounded-lg shadow-lg dark:border dark:border-white"
-            />
-          </div>
-        )}
-        {product.image3 && (
-          <div className="md:w-1/2">
-            <img
-              src={product.image3}
-              alt={product.name}
-              className="w-full max-h-[500px] h-auto object-cover rounded-lg shadow-lg dark:border dark:border-white"
-            />
-          </div>
-        )}
-      </div>
     </div>
   );
 };
